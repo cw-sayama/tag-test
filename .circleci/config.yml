@@ -27,4 +27,5 @@ workflows:
         filters:
           tags:
             only: /.*/
-            ignore: /hoge/
+          branches:
+            ignore: /.*/
