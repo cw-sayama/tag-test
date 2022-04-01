@@ -21,12 +21,14 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  version: 2.1
   say-hello-workflow:
+    jobs:
+      - say-hello
+  say-hello-workflow-tag:
     jobs:
       - say-hello:
         filters:
           branches:
             ignore: /.*/
           tags:
-            only: /test*/
+            only: /.*/
