@@ -28,7 +28,5 @@ workflows:
     jobs:
       - say-hello:
         filters:
-          branches:
-            ignore: /.*/
           tags:
             only: /.*/
